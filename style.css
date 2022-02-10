@@ -110,29 +110,35 @@ body {
   grid-area: tip-amount;
   align-self: center;
   padding: 30px;
+  color: white;
 }
 
 .tip-amount-value {
   grid-area: tip-amount-value;
   align-self: center;
-  padding: 20px 70px 20px 10px;
+  padding: 20px 50px 20px 10px;
   text-align: left;
   font-weight: 700;
   font-size: 30px;
+  text-align: right;
+  color: hsl(172, 67%, 45%);
 }
 
 .total-per-person {
   grid-area: total-per-person;
   align-self: center;
   padding: 30px;
+  color: white;
 }
 
 .per-person-value {
   grid-area: per-person-value;
   align-self: center;
-  padding: 20px 70px 20px 10px;
+  padding: 20px 50px 20px 10px;
   font-size: 30px;
   font-weight: 700;
+  text-align: right;
+  color: hsl(172, 67%, 45%);
 }
 
 .reset-btn {
