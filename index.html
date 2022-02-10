@@ -20,13 +20,13 @@
   <body>
     <main role="main">
       <article class="container-grid">
-        <h1 class="title">Splitter</h1>
+        <h1 class="title">Spli<br>tter</h1>
         <div class="app">
           <div class="internal-grid">
             <div class="left-grid">
               <div class="total-bill">
                 <form>
-                  <label for="total-bill">Bill</label><br />
+                  <label for="total-bill" class="md-weight">Bill</label><br />
                   <div class="input-icon">
                     <input
                       type="text"
@@ -37,23 +37,39 @@
                   </div>
                 </form>
               </div>
-              <div class="tip-selction">Select Tip %</div>
+              <div class="tip md-weight">Select Tip %
+              </div> 
+                <div class="tip-selection">
+                  <button id="five" class="dark">5%</button>
+                  <button id="ten" class="dark">10%</button>
+                  <button id="fifteen">15%</button>
+                  <button id="twentyfive" class="dark">25%</button>
+                  <button id="fifty" class="dark">50%</button>
+                  <button id="custom">Custom</button>
+              </div>    
               <div class="no-people">
-                <label for="no-people">Number of People</label><br />
+                <label for="no-people" class="md-weight">Number of People</label><br />
                   <div class="input-icon">
                     <input
                       type="text"
                       id="input-fields"
                       name="no-people"
                       value="0"
-                    /><img id="i" src="images/icon-person.svg" alt="dollar sign">
+                    /><img id="i" src="images/icon-person.svg" alt="icon of person">
                   </div>
                 </form>
               </div>
             </div>
             <div class="right-grid">
-              <div>Tip Amount</div>
-              <div>Total</div>
+              <div class="tip-amount">Tip Amount
+                <p>/person</p>
+              </div>
+              <p class="tip-amount-value">$4.27</p>
+              <div class="total-per-person">Total
+                <p>/person</p>
+              </div>
+              <p class="per-person-value">$32.79</p>
+              <button class="reset-btn">Reset</button>
             </div>
           </div>
         </div>

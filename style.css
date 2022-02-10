@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Outfit&family=Space+Mono&display=swap);
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,16 @@ body {
   height: 100%;
   width: 100%;
   background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', sans-serif;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.md-weight {
+  font-weight: 500;
 }
 
 .container-grid {
@@ -24,9 +36,9 @@ body {
 
 .app {
   background-color: hsl(0, 0%, 100%);
-  width: 45rem;
-  height: 25rem;
-  border-radius: 30px 30px;
+  width: 47rem;
+  height: 26rem;
+  border-radius: 20px;
 }
 
 .internal-grid {
@@ -37,7 +49,16 @@ body {
 
 .internal-grid .left-grid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 7fr 4fr 10fr 8fr;
+  row-gap: 0rem;
+}
+
+.total-bill {
+  grid-row-start: 1;
+}
+
+.total-bill label {
+  margin-top: 12px;
 }
 
 .input-icon {
@@ -60,8 +81,8 @@ body {
 #input-fields {
   border: 0;
   background-color: hsl(189, 41%, 97%);
-  width: 18rem;
-  height: 2.5rem;
+  width: 20.5rem;
+  height: 2.8rem;
   border-radius: 7px;
 }
 
@@ -71,6 +92,118 @@ body {
   padding-right: 10px;
 }
 
+.right-grid {
+  display: grid;
+  grid-template-rows: 2fr 2fr 4fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'tip-amount tip-amount-value'
+    'total-per-person per-person-value'
+    'reset-btn reset-btn';
+  background-color: hsl(183, 100%, 15%);
+  width: 21.5rem;
+  height: 22.5rem;
+  border-radius: 15px;
+}
+
+.tip-amount {
+  grid-area: tip-amount;
+  align-self: center;
+  padding: 30px;
+}
+
+.tip-amount-value {
+  grid-area: tip-amount-value;
+  align-self: center;
+  padding: 20px 70px 20px 10px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.total-per-person {
+  grid-area: total-per-person;
+  align-self: center;
+  padding: 30px;
+}
+
+.per-person-value {
+  grid-area: per-person-value;
+  align-self: center;
+  padding: 20px 70px 20px 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.reset-btn {
+  grid-area: reset-btn;
+  width: 18rem;
+  height: 3rem;
+  justify-self: center;
+  align-self: center;
+  border: 0;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tip {
+  height: 10px;
+}
+.tip-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'five ten fifteen'
+    'twentyfive fifty custom';
+}
+
+#five {
+  grid-area: five;
+}
+
+#ten {
+  grid-area: ten;
+}
+#fifteen {
+  grid-area: fifteen;
+}
+#twentyfive {
+  grid-area: twentyfive;
+}
+#fifty {
+  grid-area: fifty;
+}
+#custom {
+  grid-area: custom;
+}
+
+.tip-selection > * {
+  width: 6rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.tip-selection > *:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+.tip-selection > .dark {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+.tip-selection > #fifteen {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.no-people {
+  padding-top: 19px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
