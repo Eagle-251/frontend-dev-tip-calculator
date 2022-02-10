@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.container-grid {
+  display: grid;
+  grid-template-rows: 25% 25%;
+  place-items: center;
+  margin-top: 10rem;
+}
+
+.title {
+  margin-bottom: 5rem;
+}
+
+.app {
+  background-color: hsl(0, 0%, 100%);
+  width: 45rem;
+  height: 25rem;
+  border-radius: 30px 30px;
+}
+
+.internal-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 30px;
+}
+
+.internal-grid .left-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon > #i {
+  position: absolute;
+  display: block;
+  transform: translate(110%, -50%);
+  top: 50%;
+  width: 10px;
+}
+
+.input-icon > input {
+  padding-left: 25px;
+  padding-right: 0;
+}
+
+#input-fields {
+  border: 0;
+  background-color: hsl(189, 41%, 97%);
+  width: 18rem;
+  height: 2.5rem;
+  border-radius: 7px;
+}
+
+#input-fields[value] {
+  text-align: right;
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
