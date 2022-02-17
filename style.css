@@ -47,10 +47,22 @@ body {
   margin: 30px;
 }
 
-.internal-grid .left-grid {
+.left-grid {
   display: grid;
   grid-template-rows: 7fr 4fr 10fr 8fr;
   row-gap: 0rem;
+}
+
+.error-text {
+  padding-left: 3.5rem;
+  color: red;
+}
+
+.error-border {
+  border: 2px solid red;
+  width: 20.5rem;
+  height: 2.8rem;
+  border-radius: 7px;
 }
 
 .total-bill {
@@ -78,7 +90,7 @@ body {
   padding-right: 0;
 }
 
-#input-fields {
+.input-fields {
   border: 0;
   background-color: hsl(189, 41%, 97%);
   width: 20.5rem;
@@ -86,7 +98,21 @@ body {
   border-radius: 7px;
 }
 
-#input-fields[value] {
+.error-text {
+  color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input-fields[value] {
   text-align: right;
   font-size: 24px;
   padding-right: 10px;
@@ -155,6 +181,7 @@ body {
 
 .tip {
   height: 10px;
+  align-self: center;
 }
 .tip-selection {
   display: grid;
@@ -207,9 +234,11 @@ body {
   background-color: hsl(172, 67%, 45%);
 }
 
-.no-people {
+#no-people-title {
   padding-top: 19px;
+  align-self: center;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;

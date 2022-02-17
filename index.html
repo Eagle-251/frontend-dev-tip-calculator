@@ -20,56 +20,111 @@
   <body>
     <main role="main">
       <article class="container-grid">
-        <h1 class="title">Spli<br>tter</h1>
+        <h1 class="title">Spli<br />tter</h1>
         <div class="app">
           <div class="internal-grid">
-            <div class="left-grid">
-              <div class="total-bill">
-                <form>
-                  <label for="total-bill" class="md-weight">Bill</label><br />
+            <form id="input-fields">
+              <div class="left-grid">
+                <div class="total-bill">
+                  <label for="total-bill" class="total-bill md-weight"
+                    >Bill</label
+                  ><br />
                   <div class="input-icon">
                     <input
-                      type="text"
-                      id="input-fields"
-                      name="total-bill"
+                      type="number"
+                      class="input-fields"
+                      name="form"
+                      id="total-bill"
                       value="0"
-                    /><img id="i" src="images/icon-dollar.svg" alt="dollar sign">
+                    />
+                    <small></small>
+                    <img
+                      id="i"
+                      src="images/icon-dollar.svg"
+                      alt="dollar sign"
+                    />
                   </div>
-                </form>
-              </div>
-              <div class="tip md-weight">Select Tip %
-              </div> 
+                </div>
+                <div class="tip md-weight">Select Tip %</div>
                 <div class="tip-selection">
-                  <button id="five" class="dark">5%</button>
-                  <button id="ten" class="dark">10%</button>
-                  <button id="fifteen">15%</button>
-                  <button id="twentyfive" class="dark">25%</button>
-                  <button id="fifty" class="dark">50%</button>
-                  <button id="custom">Custom</button>
-              </div>    
-              <div class="no-people">
-                <label for="no-people" class="md-weight">Number of People</label><br />
-                  <div class="input-icon">
-                    <input
-                      type="text"
-                      id="input-fields"
-                      name="no-people"
-                      value="0"
-                    /><img id="i" src="images/icon-person.svg" alt="icon of person">
-                  </div>
-                </form>
+                  <input
+                    type="button"
+                    id="five"
+                    class="dark"
+                    value="5%"
+                    onclick="calcTip(0.05)"
+                  />
+                  <input
+                    type="button"
+                    id="ten"
+                    class="dark"
+                    value="10%"
+                    onclick="calcTip(0.10)"
+                  />
+                  <input
+                    type="button"
+                    id="fifteen"
+                    class="dark"
+                    value="15%"
+                    onclick="calcTip(0.15)"
+                  />
+                  <input
+                    type="button"
+                    id="twentyfive"
+                    class="dark"
+                    value="25%"
+                    onclick="calcTip(0.25)"
+                  />
+                  <input
+                    type="button"
+                    id="fifty"
+                    class="dark"
+                    value="50%"
+                    onclick="calcTip(0.5)"
+                  />
+                  <input
+                    type="number"
+                    id="custom"
+                    class="input-fields"
+                    value="custom"
+                    onfocus="this.value=''"
+                    oninput="calcTip()"
+                  />
+                </div>
+                <label for="no-people" id="no-people-title" class="md-weight"
+                  >Number of People
+                  <small class="error-text"></small>
+                </label>
+
+                <br />
+                <div class="input-icon">
+                  <input
+                    type="number"
+                    class="input-fields"
+                    name="form"
+                    id="no-people"
+                    value="0"
+                  />
+                  <img
+                    id="i"
+                    src="images/icon-person.svg"
+                    alt="icon of person"
+                  />
+                </div>
               </div>
-            </div>
+            </form>
             <div class="right-grid">
-              <div class="tip-amount">Tip Amount
+              <div class="tip-amount">
+                Tip Amount
                 <p>/person</p>
               </div>
-              <p class="tip-amount-value">$4.27</p>
-              <div class="total-per-person">Total
+              <p class="tip-amount-value">$0.00</p>
+              <div class="total-per-person">
+                Total
                 <p>/person</p>
               </div>
-              <p class="per-person-value">$32.79</p>
-              <button class="reset-btn">Reset</button>
+              <p class="per-person-value">$0.00</p>
+              <button class="reset-btn" onclick="reset()">Reset</button>
             </div>
           </div>
         </div>
@@ -82,5 +137,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </main>
+    <script src="app.js" charset="utf-8"></script>
   </body>
 </html>
